@@ -1,0 +1,6 @@
+Config 
+Config::get('app.timezone');
+//get with Default value
+Config::get('app.timezone', '	BST');
+//set Configuration
+Config::set('database.default', 'sqlite');
