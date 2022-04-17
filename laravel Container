@@ -1,0 +1,15 @@
+Container 
+App::bind('do', function($app){ return new do; });
+App::make('do');
+// If this class exists, it's returned
+App::make('nabar');
+// Register a shared binding in the container
+App::singleton('do', function(){ return new do; });
+// Register an existing instance as shared in the container
+App::instance('do', new Do);
+// Register a binding with the container
+App::bind('DoRepositoryInterface', 'BarRepository');
+// Register a service provider with the application
+App::register('DoServiceProvider');
+// Listen for object resolution
+App::resolving(function($object){});
